@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode h1 {
+            color: #eee;
+            border-bottom: 1px solid #555;
+        }
+        .dark-mode h2 {
+            color: #ddd;
+        }
+
+        .dark-mode h2:before {
+            color: #ddd;
+        }
+        .container {
+            border: 1px solid #555;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #444;
+        }
+        h1 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            counter-increment: section;
+        }
+
+        h2:before {
+            content: counters(section, ".") ". ";
+        }
+
+        p {
+            color: #ccc;
+            margin-bottom: 15px;
+            padding: 0 10px;
+        }
+        ul {
+            padding: 0 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .light-mode {
+            background-color: #fff;
+            color: #333;
+        }
+        .light-mode #darkModeButton {
+            color: black;
+        }
+        .dark-mode #darkModeButton {
+            color: white;
+        }
+        .light-mode .container {
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        .light-mode h1 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+        }
+        .light-mode h2 {
+            color: #333;
+        }
+        .light-mode h2:before {
+            color: #333;
+        }
+        .light-mode p {
+            color: #555;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <div style="display: flex; justify-content: flex-end; padding: 10px;">
+        <button id="darkModeButton" onclick="toggleDarkMode()" style="background: none; border: none;  cursor: pointer; font-size: 20px;">
+            ☀️ Dark Mode
+        </button>
+    </div>
+    <div class="container">
+        <h1>Privacy Policy - OIIA Maze</h1>
+        <p>This privacy policy applies to the OIIA Maze game. We are committed to protecting your privacy. This policy explains that OIIA Maze does not collect any personal information from its users.</p>
+        <h2>Information Collection</h2>
+        <p>OIIA Maze is a fully standalone application. It does not collect, transmit, or store any personal data. The game does not have any network connections or backend services. Therefore, no information is collected, used, or shared.</p>
+
+        <h2>Data Security</h2>
+        <p>Since OIIA Maze does not collect any personal information, data security measures are not applicable.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>OIIA Maze does not use any third-party services that collect or share your information.</p>
+
+        <h2>Changes to This Privacy Policy</h2>
+        <p>As OIIA Maze does not collect any data, changes to this policy will be minimal. We will update this policy if there are any changes to the game that affect data collection.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this privacy policy, please contact us.</p>
+    </div>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const button = document.getElementById("darkModeButton");
+            body.classList.toggle("light-mode");
+            body.classList.toggle("dark-mode");
+            if (body.classList.contains("light-mode")) {
+                button.textContent = "🌙 Light Mode";
+            } else {
+                button.textContent = "☀️ Dark Mode";
+            }
+        }
+    </script>
+</body>
+</html>
